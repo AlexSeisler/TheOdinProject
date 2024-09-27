@@ -5,8 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="RPS.js"></script>
+    <link rel="stylesheet" href="RPS.css">
 </head>
 <body>
-    
+    <div id="game">
+        <div id="score">
+            <p id="resultPlayer">
+
+            </p>
+            
+            <p id="resultComputer">
+
+            </p>
+        </div>
+        <div id="text">
+            <h1>Results</h1>
+            <p id="GameResult">
+
+            </p>
+        </div>
+        <div class="buttons">
+            <button class="image-button" onclick='playRound("rock",getComputerChoice())'><img src="rock.png" height="150" width="150"></button>
+            <button class="image-button" onclick='playRound("paper",getComputerChoice())'><img src="paper.png" height="150" width="150"></button>
+            <button class="image-button" onclick='playRound("scissors",getComputerChoice())'><img src="scissors.png" height="150" width="150"></button>
+        </div>
+    </div>
+
 </body>
 </html>
