@@ -22,77 +22,87 @@ function getHumanChoice()
     }
 }
 
-
-
-
-function playGame()
-{
-    function playRound(human, computer)
-    {
-        if(human == "rock")
-        {
-            if(computer == "paper")
-            {
-                console.log("You lose! Paper beats Rock");
-                computerScore++;
-            }
-            else if(computer == "rock")
-            {
-                console.log("Draw!");
-            }
-            else if(computer == "scissors")
-            {
-                console.log("You win!, rock beats scissors");
-                playerScore++;
-            }
-        }
-        else if(human == "paper")
-        {
-            if(computer == "paper")
-            {
-                console.log("Draw!");
-            }
-            else if(computer == "rock")
-            {
-                
-                console.log("You win! Paper beats Rock");
-                playerScore++;
-            }
-            else if(computer == "scissors")
-            {
-                console.log("You lose!, scissors beats paper");
-                computerScore++;
-            }
-        }
-        else if(human == "scissors")
-        {
-            if(computer == "paper")
-            {
-                console.log("You win!, scissors beats paper");
-                playerScore++;
-            }
-            else if(computer == "rock")
-            {
-                console.log("You lose!, rock beats scissors");
-                computerScore++;
-
-            }
-            else if(computer == "scissors")
-            {
-                console.log("Draw!");
-            }
-        }
-        return;
-    }
 var playerScore = 0;
 var computerScore = 0;
-for(let i = 0;i<5;i++)
+function playRound(human, computer)
+{
+    
+    const scorePlayer = document.getElementById("resultPlayer");
+    const scoreComputer = document.getElementById("resultComputer");
+    const gameResult = document.getElementById("GameResult");
+    if(human == "rock")
     {
-        playRound(getHumanChoice(),getComputerChoice());
-        console.log("Player Score: "+playerScore);
-        console.log("Computer Score: "+computerScore);
+        if(computer == "paper")
+        {
+            gameResult.textContent =("You lose! Paper beats Rock");
+            computerScore++;
+        }
+        else if(computer == "rock")
+        {
+            gameResult.textContent =("Draw!");
+        }
+        else if(computer == "scissors")
+        {
+            gameResult.textContent =("You win!, rock beats scissors");
+            playerScore++;
+        }
     }
+    else if(human == "paper")
+    {
+        if(computer == "paper")
+        {
+            gameResult.textContent =("Draw!");
+        }
+        else if(computer == "rock")
+        {
+            
+            gameResult.textContent =("You win! Paper beats Rock");
+            playerScore++;
+        }
+        else if(computer == "scissors")
+        {
+            gameResult.textContent =("You lose!, scissors beats paper");
+            computerScore++;
+        }
+    }
+    else if(human == "scissors")
+    {
+        if(computer == "paper")
+        {
+            gameResult.textContent =("You win!, scissors beats paper");
+            playerScore++;
+        }
+        else if(computer == "rock")
+        {
+            gameResult.textContent =("You lose!, rock beats scissors");
+            computerScore++;
+
+        }
+        else if(computer == "scissors")
+        {
+            gameResult.textContent =("Draw!");
+        }
+    }
+    if(playerScore>=5)
+    {
+        document.getElementById('game').style.display = 'none';
+        const end = document.createElement("p");
+        end.innerText = "You Win!";
+        end.style.cssText = 'display:flex; justify-content:center; align-items:center; color: red; font-size:200px;';
+        document.body.appendChild(end);
+    }
+    if(computerScore>=5)
+    {
+        document.getElementById('game').style.display = 'none';
+        const end = document.createElement("p");
+        end.innerText = "Computer Wins!";
+        end.style.cssText = 'display:flex; justify-content:center; align-items:center; color: red; font-size:200px;';
+        document.body.appendChild(end);
+    }
+    scorePlayer.textContent = ("Players Score: "+playerScore);
+    scoreComputer.textContent = ("Computers Score: "+computerScore);
+    return;
 }
 
-playGame();
+
 
