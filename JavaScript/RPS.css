@@ -1,0 +1,52 @@
+button{
+    height:150px;
+    width:150px;
+    background-color:grey;
+    color:white;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 20px;;
+    
+}
+.image-button{
+    display:flex;
+    justify-content: center;
+    overflow:hidden;
+}
+.buttons{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+}
+button:hover{
+    transform:scale(1.1);
+}
+#resultPlayer{
+    color:black;
+    font-size:30px;
+}
+#resultComputer{
+    color:black;
+    font-size:30px;
+}
+#score{
+    font-size:20px;
+    color:white;
+    height:60px;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+}
+#text{
+    background-color:lightblue;
+    font-size:15px;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:30px;
+}
+body{
+    
+}
