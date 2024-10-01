@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.Calc-Box{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:10px;
+    outline: black solid 2px;
+    padding:15px;
+    background-color:grey;
+}
+.Calc-Output{
+    height:30px;
+    width:220px;
+    outline:black solid 2px;
+    background-color:rgb(217, 98, 29);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+
+}
+.Calc-Buttons{
+    
+}
+.num{
+    height:50px;
+    width:50px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background-color:azure
+}
+.oper{
+    height:50px;
+    width:50px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background-color:pink;
+}
+#display{
+
+}
